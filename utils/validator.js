@@ -29,7 +29,16 @@ const registrationValidator = ({name,username, email, password}) => {
 
     })
 }
+const loginValidation = ({loginId, password}) => {
+    return new Promise((resolve, reject) => {
+        if (typeof loginId !== "string" || typeof password !== "string" || !loginId || !password) {
+            reject("Invalid data.");
+        }
+        resolve();
+    })
+}
 
 module.exports = {
-    registrationValidator
+    registrationValidator,
+    loginValidation
 }

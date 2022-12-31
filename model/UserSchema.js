@@ -23,8 +23,16 @@ const UserSchema = new Schema({
     },
     phone: {
         type: String,
-        
     },
+    collegeName: {
+        type: String
+    },
+    state: {
+        type: String
+    },
+    country: {
+        type: String
+    }
 });
 
 module.exports = mongoose.model("users", UserSchema);

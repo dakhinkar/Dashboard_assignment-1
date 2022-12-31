@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        h3{
+            color: white;
+            position: absolute;
+            top: 5px;
+        }
+        .navbar{
+            background-color: lightsalmon;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            height: 3rem;
+        }
+        .imageSection{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .imageSection input{
+            visibility: hidden;
+        }
+        .imageSection img{
+            position: absolute;
+            bottom: -80px;
+            width: 80px;
+            height: 80px;
+            background-color: aqua;
+            border-radius: 50% ;
+            outline: 5px solid whitesmoke;
+            /* width: fit-content; */
+        }
+        .bodysection{
+                margin: 0 8rem;
+                margin-top: 5rem;
+        }
+        .section{
+                display: flex;
+                justify-content: space-between;
+                gap: 3rem;
+                /* background-color: azure; */
+                margin-bottom: 20px;
+        }
+        label{
+            font-weight: bold;
+        }
+        .section div{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 0.4rem;
+            width: 100%;
+        }
+        .section div input 
+        {
+            width: 100%;
+            background-color: transparent;
+            outline: none;
+            border: 1px solid black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .left{
+            width: 30% !important;
+        }
+        .right{
+            width: 50% !important;
+        }
+        .column{
+            width: 30% !important;
+        }
+        button{
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-weight: bold;
+            color: white;
+            border: none;
+        }
+        button:hover{
+            opacity: 0.5;
+        }
+        .action-btn{
+            background-color: black;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form class="container" id="profileForm">
+        <div class="navbar">
+            <button>back</button>
+            <div class="center">
+                <h3>Edit Profile</h3>
+                <div class="imageSection">
+                    <input type="file" id="pImg">
+                    <img src="" alt="" class="image" id="profileImg">
+                </div>
+            </div>
+            <button>Sharing</button>
+        </div>
+        <div class="bodysection">
+            <div class="section">
+                <div class="left">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Name" name="name" id="name" required>
+                </div>
+                <div class="right">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Username" name="username" id="username" required>
+                </div>
+                
+            </div>
+            <div  class="section">
+                <div>
+                    <label for="email">Email Id</label>
+                    <input type="email" placeholder="email" name="email" id="email" required>
+                </div>
+            </div>
+            <div  class="section">
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="number"
+                    name="phone"
+                    id="phone" placeholder="1234567890">
+                </div>
+            </div>
+            <div  class="section">
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" 
+                    placeholder="password" required>
+                </div>
+            </div>
+            <div  class="section">
+                <div class="left">
+                    <label for="clgName">College Name</label>
+                    <input type="text"
+                    name="clgName" id="clgName" placeholder="xyz">
+                </div>
+                <div class="right column">
+                    <div > 
+                        <label for="state">State</label>
+                        <input type="text"
+                        name="state" id="state" placeholder="xyz">
+                    </div>
+                    <div>
+                        <label for="country">Country</label>
+                        <input type="text"
+                        name="country"
+                        id="country" placeholder="xyz">
+                    </div>
+                   
+                </div>
+
+            </div>
+            <button class="action-btn">Change Password</button> 
+            <button class="action-btn" type="submit">Save</button>
+        </div>
+    </form>
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
+</body>
+</html>
